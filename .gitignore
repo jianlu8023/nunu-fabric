@@ -1,0 +1,7 @@
+storage
+.idea
+*.log
+scripts/docker-compose/conf
+scripts/docker-compose/data
+vendor
+
