@@ -67,6 +67,7 @@ func Test_getWD(t *testing.T) {
 	abs, _ := filepath.Abs(lookPath)
 	dir := path.Dir(abs)
 	fmt.Println("os.Args[0]: ", dir)
+
 	_, file, _, _ := runtime.Caller(0)
 	fmt.Println("runtime.Caller(0): ", file)
 

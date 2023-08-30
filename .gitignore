@@ -1,7 +1,7 @@
 storage
 .idea
 *.log
-scripts/docker-compose/conf
-scripts/docker-compose/data
+deploy/docker-compose/conf
+deploy/docker-compose/data
 vendor
 

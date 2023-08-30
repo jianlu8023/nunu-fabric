@@ -1,13 +1,14 @@
 package log
 
 import (
+	"os"
+	"time"
+
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
-	"os"
-	"time"
 )
 
 const LOGGER_KEY = "zapLogger"
@@ -90,8 +91,8 @@ func initZap(conf *viper.Viper) *Logger {
 }
 
 func timeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
-	//enc.AppendString(t.Format("2006-01-02 15:04:05"))
-	enc.AppendString(t.Format("2006-01-02 15:04:05.000000000"))
+	enc.AppendString(t.Format("2006-01-02 15:04:05"))
+	// enc.AppendString(t.Format("2006-01-02 15:04:05.000000000"))
 }
 
 // NewContext Adds a field to the specified context
