@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
-	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/pkg/request"
-	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/service"
+	"nunu-fabric/internal/organization/pkg/request"
+	"nunu-fabric/internal/organization/service"
 	"nunu-fabric/pkg/helper/resp"
 )
 

@@ -6,7 +6,7 @@ package main
 import (
 	"github.com/google/wire"
 	"github.com/spf13/viper"
-	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/job"
+	"nunu-fabric/internal/organization/job"
 	"nunu-fabric/pkg/log"
 )
 

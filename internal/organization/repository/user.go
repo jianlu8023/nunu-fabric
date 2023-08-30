@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 	"gorm.io/gorm"
-	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/model"
+	"nunu-fabric/internal/organization/model"
 )
 
 type UserRepository interface {

@@ -9,7 +9,7 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/model"
+	"nunu-fabric/internal/organization/model"
 )
 
 // MockUserRepository is a mock of UserRepository interface.
