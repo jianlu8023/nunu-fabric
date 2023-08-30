@@ -6,9 +6,9 @@ import (
 
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/bcrypt"
-	"nunu-fabric/internal/cn/cas/xjipc/blockchain/model"
-	"nunu-fabric/internal/cn/cas/xjipc/blockchain/pkg/request"
-	"nunu-fabric/internal/cn/cas/xjipc/blockchain/repository"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/model"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/pkg/request"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/repository"
 )
 
 type UserService interface {

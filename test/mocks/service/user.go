@@ -9,8 +9,8 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	"nunu-fabric/internal/cn/cas/xjipc/blockchain/model"
-	"nunu-fabric/internal/cn/cas/xjipc/blockchain/pkg/request"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/model"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/pkg/request"
 )
 
 // MockUserService is a mock of UserService interface.

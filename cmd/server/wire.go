@@ -6,39 +6,39 @@ package main
 import (
 	"github.com/google/wire"
 	"github.com/spf13/viper"
-	handler2 "nunu-fabric/internal/cn/cas/xjipc/blockchain/handler"
-	repository2 "nunu-fabric/internal/cn/cas/xjipc/blockchain/repository"
-	server2 "nunu-fabric/internal/cn/cas/xjipc/blockchain/server"
-	service2 "nunu-fabric/internal/cn/cas/xjipc/blockchain/service"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/handler"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/repository"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/server"
+	"nunu-fabric/internal/xjipc.cas.cn/blockchain/organization/service"
 	"nunu-fabric/pkg/helper/sid"
 	"nunu-fabric/pkg/jwt"
 	"nunu-fabric/pkg/log"
 )
 
 var HandlerSet = wire.NewSet(
-	handler2.NewHandler,
-	handler2.NewUserHandler,
+	handler.NewHandler,
+	handler.NewUserHandler,
 )
 
 var ServiceSet = wire.NewSet(
-	service2.NewService,
-	service2.NewUserService,
+	service.NewService,
+	service.NewUserService,
 )
 
 var RepositorySet = wire.NewSet(
-	repository2.NewDB,
-	repository2.NewRedis,
-	repository2.NewRepository,
-	repository2.NewUserRepository,
+	repository.NewDB,
+	repository.NewRedis,
+	repository.NewRepository,
+	repository.NewUserRepository,
 )
 
-func newApp(*viper.Viper, *log.Logger) (*server2.Server, func(), error) {
+func newApp(*viper.Viper, *log.Logger) (*server.Server, func(), error) {
 	panic(wire.Build(
 		RepositorySet,
 		ServiceSet,
 		HandlerSet,
-		server2.NewServer,
-		server2.NewServerHTTP,
+		server.NewServer,
+		server.NewServerHTTP,
 		sid.NewSid,
 		jwt.NewJwt,
 	))
